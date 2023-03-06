@@ -1,0 +1,9 @@
+GET http://localhost:8000/api/user
+Content-Type: application/json
+Cookie:token=hbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ViYWU5ZmI3ZDY5MjlhZmM2Y2U5ZTUiLCJuYW1lIjoic2RmIiwiZW1haeeeWwiOiJkYWRmc2RoZiIsInBpY3R1cmUiOiJodHRwczovL3Bpbi5pdC82UkRRSEg5IiwiaWF0IjoxNjc2MzkwMDQ4fQ.F3VZ6SVxYW-zmytXQER15Z0HgNfSjJ4xZ_wrfMTRBTM
+
+{
+    "name":"sdf",
+    "email":"daddddfsdhf",
+    "password":"woddrd"
+}
