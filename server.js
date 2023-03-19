@@ -5,6 +5,7 @@ const routes = require( './routes');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db.config');
 const cors = require('cors');
+const path = require('path');
 // const  cookieParser = require('cookie-parser');
 dotenv.config();
 
@@ -25,8 +26,13 @@ socketServer(httpServer);
 
 app.use('/api',routes);
 
+if(process.env.NODE_ENV==="production"){
+    app.use(express.static(path.resolve(__dirname,'client','build')));
+    app.get("*",(req,res)=>{
+        res.status(200).sendFile(path.resolve(__dirname,'client','build','index.html'));
+    })
+}
 
-
-httpServer.listen(8000,()=>{
-    console.log('listening on port 8000');
+httpServer.listen(process.env.PORT,()=>{
+    console.log(`listening on port ${process.env.PORT}`);
 });
