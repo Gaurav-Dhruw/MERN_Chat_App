@@ -8,7 +8,7 @@
     "start": "node server.js",
     "client": "npm install --prefix client",
     "build": "npm run build --prefix client",
-    "render-postbuild": "npm run client && npm run build"
+    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client && npm run build"
     
   },
   "author": "",
