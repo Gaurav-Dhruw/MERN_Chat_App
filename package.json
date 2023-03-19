@@ -8,8 +8,7 @@
     "start": "node server.js",
     "client": "npm install --prefix client",
     "build": "npm run build --prefix client",
-    "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm run client && npm run build"
-    
+    "render-postbuild": "npm run client && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +22,8 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.1",
-    "socket.io": "^4.6.0"
+    "socket.io": "^4.6.0",
+    "vite-express": "^0.4.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

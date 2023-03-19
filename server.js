@@ -26,12 +26,11 @@ socketServer(httpServer);
 
 app.use('/api',routes);
 
-if(process.env.NODE_ENV==="production"){
-    app.use(express.static(path.resolve(__dirname,'client','dist')));
-    app.get("*",(req,res)=>{
+app.use(express.static(path.resolve(__dirname,'client','dist')));
+app.get("*",(req,res)=>{
         res.status(200).sendFile(path.resolve(__dirname,'client','dist','index.html'));
-    })
-}
+})
+
 
 httpServer.listen(process.env.PORT,()=>{
     console.log(`listening on port ${process.env.PORT}`);
