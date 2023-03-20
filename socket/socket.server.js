@@ -5,7 +5,7 @@ const messageHandler = require('./message.handler');
 module.exports = (httpServer)=>{
     const io = new Server(httpServer,{
         cors:{
-            origin: ['http://localhost:5000',"http://localhost:3000"],
+            origin: ['http://localhost:5000',"http://localhost:3000","http://localhost:8000","https://chatico.onrender.com"],
             credentials:true
         }
     });
