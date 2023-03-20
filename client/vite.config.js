@@ -7,10 +7,5 @@ export default defineConfig({
   server:{
     port:'5000'
   },
-  build: {
-    manifest: true,
-    rollupOptions: {
-      input: "./src/main.jsx",
-    },
-  },
+
 })
